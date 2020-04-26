@@ -1,4 +1,93 @@
-.App {
-  margin: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+.sidebar {
+  background-color: #1C1C1C;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar-main {
+  margin-left: 300px;
+  display: flex;
+  margin-top: 15vh;
+}
+
+.sidebar .namecard {
+  font-size: 1.25rem;
+  color: #BABABA;
+  text-align: right;
+}
+
+.sidebar .namecard .name {
+  font-size: 3rem;
+}
+
+.sidebar nav {
+  text-align: right;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+
+.sidebar .intro {
+  margin-left: 48px;
+  max-width: 300px;
+}
+
+.sidebar .skillbar {
+  color: #000000;
+  font-weight: bold;
+  margin-top: 112px;
+  background-color: #FFDC00;
+}
+
+.sidebar .skillbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sidebar .skillbar li {
+  display: block;
+  padding: 1.25rem;
+}
+
+.hero-border {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  width: 100vh;
+  z-index: -1;
+  clip-path: polygon(
+    20% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+  );
+  background-color: #FFD13B;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  background-image: url('profile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  clip-path: polygon(
+    calc(20% + 20px) 0%,
+    100% 0%,
+    100% 100%,
+    calc(0% + 20px) 100%
+  );
+}
+
+.slider {
+  min-width: 48px;
+  height: 100vh;
+  border-right: 5px solid #FFDC00;
 }
