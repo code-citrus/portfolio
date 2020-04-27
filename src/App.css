@@ -1,14 +1,30 @@
-.sidebar {
-  background-color: #1C1C1C;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.sb-container {
+  display: flex;
   position: fixed;
+  width: 100%;
+  max-width: calc(100% - 100vh);
   height: 100vh;
 }
 
+.sb-container::before {
+  flex-grow:1;
+  max-width: 300px;
+  content: "";
+}
+
+.sidebar {
+  background-color: #1C1C1C;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .sidebar-main {
-  margin-left: 300px;
   display: flex;
   margin-top: 15vh;
+  flex-wrap: wrap;
+}
+
+.sidebar-main .navbox {
+  flex-grow: 1;
 }
 
 .sidebar .namecard {
@@ -35,8 +51,13 @@
 }
 
 .sidebar .intro {
-  margin-left: 48px;
+  margin-left: auto;
   max-width: 300px;
+}
+
+.sidebar .intro p {
+  margin: 0;
+  margin-left: 1rem;
 }
 
 .sidebar .skillbar {
@@ -44,6 +65,7 @@
   font-weight: bold;
   margin-top: 112px;
   background-color: #FFDC00;
+  border-radius: 2rem;
 }
 
 .sidebar .skillbar ul {
