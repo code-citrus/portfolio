@@ -1,0 +1,80 @@
+.sb-container {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  max-width: calc(100% - 100vh);
+  height: 100vh;
+}
+
+.sb-container::before {
+  flex-grow:1;
+  max-width: 300px;
+  content: "";
+}
+
+.sidebar {
+  background-color: #1C1C1C;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar-main {
+  display: flex;
+  margin-top: 15vh;
+  flex-wrap: wrap;
+}
+
+.sidebar-main .navbox {
+  flex-grow: 1;
+}
+
+.sidebar .namecard {
+  font-size: 1.25rem;
+  color: #BABABA;
+  text-align: right;
+}
+
+.sidebar .namecard .name {
+  font-size: 3rem;
+}
+
+.sidebar nav {
+  text-align: right;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+
+.sidebar .intro {
+  margin-left: auto;
+  max-width: 300px;
+}
+
+.sidebar .intro p {
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.sidebar .skillbar {
+  color: #000000;
+  font-weight: bold;
+  margin-top: 112px;
+  background-color: #FFDC00;
+  border-radius: 2rem;
+}
+
+.sidebar .skillbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sidebar .skillbar li {
+  display: block;
+  padding: 1.25rem;
+}
