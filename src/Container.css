@@ -1,6 +1,5 @@
 .sb-container {
   display: flex;
-  position: fixed;
   width: 100%;
   max-width: calc(100% - 100vh);
   height: 100vh;

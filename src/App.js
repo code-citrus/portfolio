@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Hero from './Hero';
-import Sidebar from './Sidebar';
+import Container from './Container';
 import './App.css';
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        <Sidebar />
+        <Container />
         <Hero dx={this.state.heroOffset}/>
       </div>
     )
