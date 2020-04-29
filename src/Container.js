@@ -3,8 +3,20 @@ import Main from './Main';
 import './Container.css';
 
 const Sidebar = ({ expandContent }) => {
+  let style = null;
+  
+  // Unset the max-width when we are ready to expand
+  // the content with an inline style. Otherwise,
+  // the inline style is removed and the max-width
+  // still applies. Thus, scrolling down and
+  // scrolling back up works fine.
+  if(expandContent) {
+    console.log('unsetting max width');
+    style = { maxWidth: 'unset' };
+  }
+  
   return (
-    <div className="sb-container">
+    <div className="sb-container" style={style}>
       <div className="content">
         <div className="sidebar">
           <div className="sidebar-main">
@@ -38,7 +50,12 @@ const Sidebar = ({ expandContent }) => {
           </div>
         </div>
       </div>
-      <Main expanded={expandContent} />
+      <Main expanded={expandContent}>
+        <section>
+          <h1>About</h1>
+          <p>The rain in spain falls mainly in the plains</p>
+        </section>
+      </Main>
     </div>
   );
 }

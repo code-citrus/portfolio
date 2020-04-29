@@ -79,9 +79,3 @@
   display: block;
   padding: 1.25rem;
 }
-
-main {
-  margin-top: 150vh;
-  min-width: 0;
-  width: 1px; /* to enbable scroll */
-}
