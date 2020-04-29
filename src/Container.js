@@ -1,7 +1,8 @@
 import React from 'react';
+import Main from './Main';
 import './Container.css';
 
-const Sidebar = () => {
+const Sidebar = ({ expandContent }) => {
   return (
     <div className="sb-container">
       <div className="content">
@@ -37,7 +38,7 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <main></main>
+      <Main expanded={expandContent} />
     </div>
   );
 }

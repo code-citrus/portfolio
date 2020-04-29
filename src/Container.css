@@ -81,7 +81,7 @@
 }
 
 main {
-  height: 200vh;
+  margin-top: 150vh;
   min-width: 0;
   width: 1px; /* to enbable scroll */
 }
