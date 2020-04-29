@@ -13,7 +13,9 @@ class App extends Component {
       heroOffset: 0,
     };
     window.addEventListener('scroll', (e) => {
-      console.log('scroll: ' + JSON.stringify(e));
+      this.setState({
+        heroOffset: window.scrollY,
+      });
     });
   }
 
