@@ -6,7 +6,7 @@
 }
 
 .sb-container::before {
-  flex-grow:1;
+  flex-grow: 1;
   max-width: 300px;
   content: "";
 }
@@ -15,7 +15,8 @@
   background-color: #1C1C1C;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: sticky;
-  top: 48px;
+  top: 64px;
+  padding: 0 2rem;
 }
 
 .sidebar-main {

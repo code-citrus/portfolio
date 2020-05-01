@@ -1,0 +1,43 @@
+.grid-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-gallery > * {
+  border-radius: 10px;
+  background-color: #1C1C1C;
+  flex-basis: 0;
+  flex-grow: 0;
+  min-width: 128px;
+  min-height: 128px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3px;
+  border: 1px solid #FFDe1A;
+  transition:
+    flex-basis 1s,
+    max-width 1s,
+    max-height 1s,
+    min-width 1s,
+    min-height 1s;
+}
+
+.grid-gallery > *:hover {
+  background-color: white;
+}
+
+.grid-gallery > *.active {
+  flex-basis: 100%;
+}
+
+.grid-gallery > *.hidden {
+  min-width: 0;
+  min-height: 0;
+  max-width: 0;
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+};

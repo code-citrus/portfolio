@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from './Main';
+import Skills from './sections/Skills';
 import './Container.css';
 
 const Sidebar = ({ expandContent }) => {
@@ -26,10 +27,10 @@ const Sidebar = ({ expandContent }) => {
                 <div className="name">Gautham</div>
               </div>
               <nav>
-                <a href="#">About</a>
                 <a href="#">Skills</a>
                 <a href="#">Experience</a>
                 <a href="#">Portfolio</a>
+                <a href="#">About</a>
               </nav>
             </div>
             <div className="intro">
@@ -51,10 +52,7 @@ const Sidebar = ({ expandContent }) => {
         </div>
       </div>
       <Main expanded={expandContent}>
-        <section>
-          <h1>About</h1>
-          <p>The rain in spain falls mainly in the plains</p>
-        </section>
+        <Skills />
       </Main>
     </div>
   );

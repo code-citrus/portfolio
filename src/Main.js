@@ -8,9 +8,11 @@ const Main = ({ expanded = false, children }) => {
   };
 
   return (
-    <main style={style}>
-      { children }
-    </main>
+    <div className="main-container" style={style}>
+      <main>
+        { children }
+      </main>
+    </div>
   );
 };
 

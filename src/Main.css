@@ -1,13 +1,12 @@
-main {
+.main-container {
   margin-top: 150vh;
   margin-bottom: 80vh;
-  margin-left: 10%;
+  margin-left: 5%;
   min-width: 0;
   width: 1px; /* to enbable scroll */
 }
 
-main section {
-  border: 1px solid #707070;
-  padding: 3rem;
+main {
+  min-height: 100vh;
   width: 70%;
 }
