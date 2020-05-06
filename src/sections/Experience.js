@@ -66,7 +66,7 @@ const Experience = ({}) => {
   };
 
   return (
-    <section>
+    <section id="experience">
       <h2>Experience</h2>
       <GridGallery gridItemStyles={{ flexBasis: "calc(50% - 28px)" }}>
         { EXPERIENCE.map(createEntry) }

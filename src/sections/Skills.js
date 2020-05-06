@@ -10,7 +10,7 @@ const gridItemStyles = {
 
 const Skills = ({}) => {
   return (
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
       <GridGallery gridItemStyles={gridItemStyles} disableExpansion>
         <div class="skill">HTML/CSS</div>

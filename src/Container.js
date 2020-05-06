@@ -28,10 +28,10 @@ const Sidebar = ({ expandContent }) => {
                 <div className="name">Gautham</div>
               </div>
               <nav>
-                <a href="#">Skills</a>
-                <a href="#">Experience</a>
-                <a href="#">Portfolio</a>
-                <a href="#">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#about">About</a>
               </nav>
             </div>
             <div className="intro">

@@ -25,7 +25,7 @@
 }
 
 .grid-gallery > .grid-item:hover {
-  background-color: white;
+  background-color: #ffc1071a;
 }
 
 .grid-gallery > .grid-item.active {
