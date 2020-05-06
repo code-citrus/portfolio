@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 }
 
-.grid-gallery > * {
+.grid-gallery > .grid-item {
   border-radius: 10px;
   background-color: #1C1C1C;
   flex-basis: 0;
@@ -12,7 +12,6 @@
   min-height: 128px;
   text-align: center;
   padding: 10px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 3px;
@@ -25,15 +24,23 @@
     min-height 1s;
 }
 
-.grid-gallery > *:hover {
+.grid-gallery > .grid-item:hover {
   background-color: white;
 }
 
-.grid-gallery > *.active {
-  flex-basis: 100%;
+.grid-gallery > .grid-item.active {
+  flex-basis: 100% !important;
 }
 
-.grid-gallery > *.hidden {
+.grid-gallery > .grid-item .expanded-only {
+  display: none;
+}
+
+.grid-gallery > .grid-item.active .expanded-only {
+  display: block;
+}
+
+.grid-gallery > .grid-item.hidden {
   min-width: 0;
   min-height: 0;
   max-width: 0;

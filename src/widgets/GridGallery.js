@@ -12,14 +12,16 @@ class GridGallery extends React.Component {
 
   createItem(child, idx) {
     let classes = 'grid-item';
+
     if(idx == this.state.selectedIndex) { 
       classes += ' active'; 
     }
     else if (this.state.selectedIndex !== null) {
       classes += ' hidden';
     }
+
     return (
-      <div className={classes} onClick={() => this.handleItemClick(idx)} key={idx}>
+      <div className={classes} onClick={() => this.handleItemClick(idx)} key={idx} style={this.props.gridItemStyles}>
         {child}
       </div>
     );
@@ -27,6 +29,10 @@ class GridGallery extends React.Component {
 
   handleItemClick(index) {
     console.log(`${index} was clicked`);
+    if(this.props.disableExpansion) {
+      return;
+    }
+
     this.setState(old => {
       if(old.selectedIndex == index) {
         return { selectedIndex: null };

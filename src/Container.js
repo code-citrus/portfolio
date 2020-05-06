@@ -1,6 +1,7 @@
 import React from 'react';
 import Main from './Main';
 import Skills from './sections/Skills';
+import Experience from './sections/Experience';
 import './Container.css';
 
 const Sidebar = ({ expandContent }) => {
@@ -53,6 +54,7 @@ const Sidebar = ({ expandContent }) => {
       </div>
       <Main expanded={expandContent}>
         <Skills />
+        <Experience />
       </Main>
     </div>
   );
