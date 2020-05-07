@@ -1,14 +1,8 @@
 .sb-container {
   display: flex;
   width: 100%;
-  max-width: calc(100% - 100vh);
   align-items: stretch;
-}
-
-.sb-container::before {
-  flex-grow: 1;
-  max-width: 300px;
-  content: "";
+  flex-wrap: wrap;
 }
 
 .sidebar {

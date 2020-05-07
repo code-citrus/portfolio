@@ -2,11 +2,11 @@
   margin-top: 150vh;
   margin-bottom: 80vh;
   margin-left: 5%;
-  min-width: 0;
+  min-width: 312px; /* Allows for 2 grid-item squares in row */
   width: 1px; /* to enbable scroll */
 }
 
 main {
   min-height: 100vh;
-  width: 70%;
+  max-width: 624px; /*Allows for 4 small grid-items square in row */
 }
