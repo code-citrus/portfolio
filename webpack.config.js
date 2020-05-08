@@ -23,6 +23,9 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         use: [{
           loader: 'file-loader',
+          options: {
+            outputPath: '/images'
+          }
         }],
       }
     ]
@@ -41,7 +44,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist/'),
     filename: 'bundle.js',
-    publicPath: '/assets/',
   },
 
   /*
