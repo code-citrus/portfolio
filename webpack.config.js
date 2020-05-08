@@ -16,25 +16,26 @@ module.exports = {
       
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: { url: false },
+        use: ['style-loader','css-loader'],
+      },
+
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets/',
           }
-        ],
+        }],
       }
     ]
   },
 
   /*
   * The bundle will be written to the dist/ directory.
-  * The publicPath specifies the baes path for all *assets*
-  * in the app, used when writing urls.
   */
   output: {
     path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/dist/',
     filename: 'bundle.js',
   },
 
@@ -47,12 +48,12 @@ module.exports = {
    * publicPath:
    * By default, WDS will mount the bundles @ server root,
    * change this. Our index.html file expects to find bundle.js
-   * at: http://localhost:3000/dist/.
+   * at: http://localhost:3000/js/.
    */
   devServer: {
-    contentBase: path.join(__dirname, 'public/'),
     port: 3000,
-    publicPath: 'https://localhost:3000/dist/',
+    contentBase: path.join(__dirname, 'public/'),
+    publicPath: 'https://localhost:3000/js/',
     hotOnly: true,
   },
 
