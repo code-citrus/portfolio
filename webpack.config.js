@@ -24,7 +24,7 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-            outputPath: '/images'
+            outputPath: 'images'
           }
         }],
       }
@@ -42,7 +42,7 @@ module.exports = {
   * publicPath setting to prefix the URLs.
   */
   output: {
-    path: path.resolve(__dirname, 'dist/'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
 
@@ -55,13 +55,13 @@ module.exports = {
    * 
    * publicPath:
    * By default, WDS will mount the bundles @ server root,
-   * change this. Our index.html file expects to find bundle.js
-   * at: http://localhost:3000/js/.
+   * Our index.html file expects to find bundle.js
+   * at the server root...
    */
   devServer: {
     port: 3000,
     contentBase: [ /*index*/ path.join(__dirname, 'public/'), /*assets*/ path.join(__dirname, 'dist')],
-    publicPath: 'https://localhost:3000/js/',
+    publicPath: 'https://localhost:3000/',
     hotOnly: true,
   },
 
